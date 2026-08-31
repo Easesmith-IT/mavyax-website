@@ -5,10 +5,20 @@ import AIDevelopmentArchitecture from "@/components/AIDevelopmentArchitecture";
 export default function MobileLayout() {
   return (
     <>
+
+    <div 
+      className="w-full relative overflow-hidden"
+      style={{
+        backgroundColor: "#0B0F17",
+        backgroundImage: "linear-gradient(to right, #1E293B 1px, transparent 1px), linear-gradient(to bottom, #1E293B 1px, transparent 1px)",
+        backgroundSize: "40px 40px",
+        backgroundPosition: "center top",
+      }}
+    >
 {/* 1. MOBILE NAVIGATION */}
 <header className="fixed top-0 w-full z-50 bg-surface/90 dark:bg-surface/90 border-b border-outline-variant flex justify-between items-center px-4 md:px-grid-margin h-16 max-w-full backdrop-blur-md">
 <div className="flex items-center gap-2">
-<span className="material-symbols-outlined text-primary text-2xl" >terminal</span>
+<span className="material-symbols-outlined text-primary text-2xl" style={{ fontVariationSettings: "'FILL' 1" }}>terminal</span>
 <span className="font-display-lg-mobile text-[24px] font-extrabold tracking-tighter text-primary">MAVYAX</span>
 </div>
 <div className="flex items-center gap-4">
@@ -22,9 +32,9 @@ export default function MobileLayout() {
 </header>
 <main className="pt-24 px-4 md:px-8 max-w-7xl mx-auto flex flex-col gap-16 md:gap-section-gap overflow-hidden w-full">
 {/* 2. HERO */}
-<section className="relative pt-8 pb-8 flex flex-col gap-6 grid-line-horizontal w-full">
+<section className="relative pt-8 pb-8 flex flex-col gap-6 border-b border-outline-variant w-full">
 <div className="inline-flex items-center gap-2 border border-outline-variant px-3 py-1 w-max rounded-sm">
-<span className="blueprint-node relative top-0 left-0 w-2 h-2"></span>
+<span className="w-2 h-2 bg-primary rounded-full absolute relative top-0 left-0 w-2 h-2"></span>
 <span className="font-label-sm text-primary uppercase">AI &amp; TECHNOLOGY TRANSFORMATION</span>
 </div>
 <h1 className="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-white">
@@ -45,7 +55,7 @@ export default function MobileLayout() {
 {/* Removed Missing Placeholder N */}
 </section>
 {/* 3. POSITIONING */}
-<section className="flex flex-col gap-8 grid-line-horizontal pb-16 w-full">
+<section className="flex flex-col gap-8 border-b border-outline-variant pb-16 w-full">
 <h2 className="font-headline-md text-headline-md-mobile md:text-headline-md max-w-3xl leading-tight">
         Technology is no longer just infrastructure; it is the core execution engine of the modern enterprise.
     </h2>
@@ -203,7 +213,7 @@ export default function MobileLayout() {
 </section>
 {/* 14. FINAL CTA */}
 <section className="py-16 px-6 flex flex-col items-center justify-center gap-8 text-center border border-outline-variant bg-surface-container relative overflow-hidden w-full">
-<div className="absolute inset-0 opacity-10" ></div>
+<div className="absolute inset-0 opacity-10" style={{ backgroundImage: "radial-gradient(circle at center, #0052ff 0%, transparent 70%)" }}></div>
 <h2 className="font-display-lg-mobile text-[32px] text-white relative z-10 w-full">BUILD WHAT COMES NEXT.</h2>
 <button className="bg-primary-container text-white px-8 py-4 rounded-sm font-label-sm uppercase tracking-wider hover:bg-primary transition-colors relative z-10 w-full">
         Start a Conversation
@@ -233,6 +243,8 @@ export default function MobileLayout() {
 <p>© 2026 Mavyax Tech Private Limited. All rights reserved.</p>
 </div>
 </footer>
+    </div>
+
     </>
   );
 }
