@@ -1,0 +1,348 @@
+<!DOCTYPE html><html class="dark" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>MAVYAX - AI &amp; Technology Transformation</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;600&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary-container": "#0052ff",
+                        "surface-container-low": "#181c24",
+                        "on-secondary-fixed": "#0b1c30",
+                        "surface-container": "#1c2028",
+                        "surface-bright": "#353942",
+                        "surface": "#0f131c",
+                        "on-tertiary": "#611300",
+                        "primary-fixed-dim": "#b7c4ff",
+                        "error-container": "#93000a",
+                        "secondary-fixed-dim": "#b7c8e1",
+                        "secondary": "#b7c8e1",
+                        "on-tertiary-fixed": "#3c0800",
+                        "outline-variant": "#434656",
+                        "on-primary-fixed": "#001452",
+                        "on-secondary-fixed-variant": "#38485d",
+                        "surface-tint": "#b7c4ff",
+                        "on-secondary": "#213145",
+                        "surface-dim": "#0f131c",
+                        "on-background": "#dfe2ee",
+                        "background": "#0f131c",
+                        "on-primary": "#002682",
+                        "error": "#ffb4ab",
+                        "surface-variant": "#31353e",
+                        "inverse-surface": "#dfe2ee",
+                        "on-secondary-container": "#a9bad3",
+                        "on-primary-fixed-variant": "#0038b6",
+                        "tertiary-fixed-dim": "#ffb4a1",
+                        "tertiary-container": "#bf3003",
+                        "surface-container-lowest": "#0a0e16",
+                        "on-tertiary-fixed-variant": "#891e00",
+                        "on-primary-container": "#dfe3ff",
+                        "surface-container-high": "#262a33",
+                        "outline": "#8d90a2",
+                        "on-surface": "#dfe2ee",
+                        "primary-fixed": "#dde1ff",
+                        "on-error-container": "#ffdad6",
+                        "on-error": "#690005",
+                        "tertiary-fixed": "#ffdbd2",
+                        "tertiary": "#ffb4a1",
+                        "on-surface-variant": "#c3c5d9",
+                        "inverse-primary": "#004ced",
+                        "on-tertiary-container": "#ffddd5",
+                        "primary": "#b7c4ff",
+                        "inverse-on-surface": "#2c3039",
+                        "surface-container-highest": "#31353e",
+                        "secondary-container": "#3a4a5f",
+                        "secondary-fixed": "#d3e4fe"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    spacing: {
+                        "grid-margin": "2rem",
+                        "stack-sm": "0.5rem",
+                        "section-gap": "8rem",
+                        "component-gap": "1.5rem",
+                        "gutter": "1.5rem",
+                        "stack-md": "1rem"
+                    },
+                    fontFamily: {
+                        "display-lg-mobile": ["Manrope"],
+                        "label-sm": ["Geist"],
+                        "headline-md": ["Manrope"],
+                        "body-md": ["Geist"],
+                        "body-lg": ["Geist"],
+                        "headline-xl": ["Manrope"],
+                        "display-lg": ["Manrope"]
+                    },
+                    fontSize: {
+                        "display-lg-mobile": ["40px", { lineHeight: "1.2", letterSpacing: "-0.02em", fontWeight: "800" }],
+                        "label-sm": ["12px", { lineHeight: "1", letterSpacing: "0.05em", fontWeight: "600" }],
+                        "headline-md": ["32px", { lineHeight: "1.3", fontWeight: "600" }],
+                        "body-md": ["16px", { lineHeight: "1.6", fontWeight: "400" }],
+                        "body-lg": ["18px", { lineHeight: "1.6", fontWeight: "400" }],
+                        "headline-xl": ["48px", { lineHeight: "1.2", letterSpacing: "-0.02em", fontWeight: "700" }],
+                        "display-lg": ["72px", { lineHeight: "1.1", letterSpacing: "-0.04em", fontWeight: "800" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #0B0F17;
+            background-image: 
+                linear-gradient(to right, #1E293B 1px, transparent 1px),
+                linear-gradient(to bottom, #1E293B 1px, transparent 1px);
+            background-size: 40px 40px;
+            background-position: center top;
+        }
+        .grid-line-vertical { border-left: 1px solid #1E293B; }
+        .grid-line-horizontal { border-bottom: 1px solid #1E293B; }
+        .blueprint-node {
+            width: 8px; height: 8px;
+            background-color: #0052ff;
+            border-radius: 50%;
+            position: absolute;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md antialiased selection:bg-primary-container selection:text-white pb-24 md:pb-0 overflow-x-hidden">
+<!-- 1. MOBILE NAVIGATION -->
+<header class="fixed top-0 w-full z-50 bg-surface/90 dark:bg-surface/90 border-b border-outline-variant flex justify-between items-center px-4 md:px-grid-margin h-16 max-w-full backdrop-blur-md">
+<div class="flex items-center gap-2">
+
+<span class="font-display-lg-mobile text-[24px] font-extrabold tracking-tighter text-white">MAVYAX</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="bg-primary-container text-white px-3 py-1.5 text-xs rounded font-label-sm uppercase tracking-wider hover:bg-primary transition-colors">
+            Start
+        </button>
+<button class="text-primary md:hidden">
+<span class="material-symbols-outlined text-2xl">menu</span>
+</button>
+</div>
+</header>
+<main class="pt-24 px-4 md:px-8 max-w-7xl mx-auto flex flex-col gap-16 md:gap-section-gap overflow-hidden w-full">
+<!-- 2. HERO -->
+<section class="relative pt-8 pb-8 flex flex-col gap-6 grid-line-horizontal w-full">
+<div class="inline-flex items-center gap-2 border border-outline-variant px-3 py-1 w-max rounded-sm">
+<span class="blueprint-node relative top-0 left-0 w-2 h-2"></span>
+<span class="font-label-sm text-primary uppercase">AI &amp; TECHNOLOGY TRANSFORMATION</span>
+</div>
+<h1 class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-white">
+        AI &amp; TECHNOLOGY <br> TRANSFORMATION
+    </h1>
+<p class="font-body-lg text-on-surface-variant max-w-2xl border-l-2 border-primary pl-4">
+        We engineer the technology that moves businesses forward. Mavyax helps businesses develop intelligent solutions, modernize critical infrastructure, and deploy AI strategically.
+    </p>
+<div class="flex flex-col gap-4 mt-4 w-full">
+<button class="bg-primary-container text-white px-6 py-4 rounded-sm font-label-sm uppercase tracking-wider hover:bg-primary transition-colors flex justify-between items-center w-full">
+            Start a Transformation
+            <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="border border-outline-variant text-white px-6 py-4 rounded-sm font-label-sm uppercase tracking-wider hover:bg-surface-container transition-colors w-full">
+            Explore Capabilities
+        </button>
+</div>
+<!-- Removed Missing Placeholder N -->
+</section>
+<!-- 3. POSITIONING -->
+<section class="flex flex-col gap-8 grid-line-horizontal pb-16 w-full">
+<h2 class="font-headline-md text-headline-md-mobile md:text-headline-md max-w-3xl leading-tight">
+        Technology is no longer just infrastructure; it is the core execution engine of the modern enterprise.
+    </h2>
+<div class="w-full border border-outline-variant bg-surface-container-lowest p-2 overflow-hidden">
+<img alt="Vertical Strategy Flow" class="w-full h-auto object-cover opacity-90" src="https://lh3.googleusercontent.com/aida/AEtjO1XyzB3h5E7_SMpU_M-nuonQXeOM-J4cBgIfMprhTM722sREzSBAAwYg6MtQMov-mnBK4pt3s5ZgXo9OfH3fwSHOnlH0jzLkBv57jjuRqWhN9De8mtqZM8aQQmgZsZsc-pSnGYJiJS5b1mzsWsO1IAzijMwlr3JgIvhcRQppMInGBrH4Hz6AUrKo1dijQaAyZ-CdyaE20lnPByAsdyGKc1IjNmX70esEFJ0dgU3fsZ4PjIPhQaEH2ESKD_o">
+</div>
+</section>
+<!-- 4. BUSINESS CHALLENGES -->
+<section class="flex flex-col gap-6 w-full">
+<h3 class="font-label-sm text-primary uppercase tracking-widest flex items-center gap-2"><span class="w-8 h-px bg-primary"></span> The Challenge</h3>
+<div class="flex flex-col gap-4 w-full">
+<div class="border border-outline-variant bg-surface-container-lowest p-6 flex flex-col gap-2">
+<h4 class="font-headline-md text-xl text-white">Fragmented Data</h4>
+<p class="font-body-md text-on-surface-variant">Silos preventing true organizational intelligence.</p>
+</div>
+<div class="border border-outline-variant bg-surface-container-lowest p-6 flex flex-col gap-2">
+<h4 class="font-headline-md text-xl text-white">Manual Processes</h4>
+<p class="font-body-md text-on-surface-variant">Scaling constrained by human bottlenecks.</p>
+</div>
+<div class="border border-outline-variant bg-surface-container-lowest p-6 flex flex-col gap-2">
+<h4 class="font-headline-md text-xl text-white">Legacy Debt</h4>
+<p class="font-body-md text-on-surface-variant">Outdated systems blocking agility.</p>
+</div>
+<div class="border border-outline-variant bg-surface-container-lowest p-6 flex flex-col gap-2">
+<h4 class="font-headline-md text-xl text-white">AI Without Integration</h4>
+<p class="font-body-md text-on-surface-variant">Tools that don't connect to core business logic.</p>
+</div>
+</div>
+<div class="bg-primary-container text-white p-6 mt-4 border-l-4 border-white w-full">
+<h4 class="font-headline-md text-xl uppercase tracking-wider">THIS IS WHERE MAVYAX COMES IN.</h4>
+</div>
+</section>
+<!-- 5. CORE CAPABILITIES -->
+<section class="flex flex-col gap-8 w-full">
+<h3 class="font-label-sm text-primary uppercase tracking-widest flex items-center gap-2"><span class="w-8 h-px bg-primary"></span> Core Capabilities</h3>
+<p class="font-body-lg text-white">Two capabilities. One transformation mindset.</p>
+<div class="grid grid-cols-1 gap-4 w-full">
+<div class="border border-outline-variant bg-surface-container-lowest p-6 flex flex-col gap-6">
+<div class="flex justify-between items-start">
+<span class="font-headline-xl text-outline-variant font-mono opacity-50">01</span>
+<span class="material-symbols-outlined text-primary text-3xl">memory</span>
+</div>
+<h4 class="font-headline-md text-white">AI Development</h4>
+</div>
+<div class="border border-outline-variant bg-surface-container-lowest p-6 flex flex-col gap-6">
+<div class="flex justify-between items-start">
+<span class="font-headline-xl text-outline-variant font-mono opacity-50">02</span>
+<span class="material-symbols-outlined text-primary text-3xl">architecture</span>
+</div>
+<h4 class="font-headline-md text-white">Business IT Transformation</h4>
+</div>
+</div>
+</section>
+<!-- 6. AI DEVELOPMENT PILLAR -->
+<section class="flex flex-col gap-8 w-full">
+<div class="flex items-center gap-4 border-b border-outline-variant pb-4">
+<span class="material-symbols-outlined text-primary text-4xl">memory</span>
+<h2 class="font-headline-md text-white">AI Development</h2>
+</div>
+<p class="font-body-md text-on-surface-variant">Building intelligent systems that understand context, automate complexity, and scale decision-making.</p>
+<div class="flex flex-col gap-3 w-full">
+<div class="border border-outline-variant p-4 text-on-surface"><span class="text-primary mr-2">■</span> AI Applications</div>
+<div class="border border-outline-variant p-4 text-on-surface"><span class="text-primary mr-2">■</span> Generative AI</div>
+<div class="border border-outline-variant p-4 text-on-surface"><span class="text-primary mr-2">■</span> AI Agents</div>
+<div class="border border-outline-variant p-4 text-on-surface"><span class="text-primary mr-2">■</span> Intelligent Automation</div>
+<div class="border border-outline-variant p-4 text-on-surface"><span class="text-primary mr-2">■</span> AI Integration</div>
+</div>
+<div class="w-full border border-outline-variant bg-surface-container-lowest p-2 overflow-hidden">
+<img alt="AI Workflow" class="w-full h-auto object-cover opacity-90" src="https://lh3.googleusercontent.com/aida/AEtjO1Uc8TxkaW2zxNHMW7oiXiw3gGE25POvEszLd0QZTADhnFHvV1Rs1wq68cE9wFYaNHYdeSdPa1Z-a9O-eh3wW7Lb38By-sBDRjXQ8-_Vdz5n7xFaG42b1hi-Gd_A156lLfHfM4mWfm0bZbNNUDozd_dbGKPioYfkFu0a70P7eLn8yE-poudbEZqAHGJOy6G7vRLbCfivqumj1mOi19ohcZeXzpspBje_JHlwAgqPqWl3Yn-FTq4AcWxHbCc">
+</div>
+</section>
+<!-- 7. AI SYSTEM ARCHITECTURE -->
+<section class="flex flex-col gap-8 w-full">
+<h3 class="font-label-sm text-primary uppercase tracking-widest flex items-center gap-2"><span class="w-8 h-px bg-primary"></span> Architecture</h3>
+<h2 class="font-headline-md text-white">FROM INTELLIGENCE TO OPERATION</h2>
+<!-- Removed Missing Placeholder N -->
+</section>
+<!-- 8. BUSINESS IT TRANSFORMATION PILLAR -->
+<section class="flex flex-col gap-8 w-full">
+<div class="flex items-center gap-4 border-b border-outline-variant pb-4">
+<span class="material-symbols-outlined text-primary text-4xl">architecture</span>
+<h2 class="font-headline-md text-white">Business IT Transformation</h2>
+</div>
+<p class="font-body-md text-on-surface-variant">Modernizing core infrastructure to support agility, scale, and advanced capabilities.</p>
+<div class="grid grid-cols-1 gap-4 w-full">
+<div class="border border-outline-variant p-4 flex flex-col gap-2">
+<span class="material-symbols-outlined text-primary">update</span>
+<h4 class="text-white font-bold">Tech Modernization</h4>
+</div>
+<div class="border border-outline-variant p-4 flex flex-col gap-2">
+<span class="material-symbols-outlined text-primary">cloud_sync</span>
+<h4 class="text-white font-bold">Legacy Transformation</h4>
+</div>
+<div class="border border-outline-variant p-4 flex flex-col gap-2">
+<span class="material-symbols-outlined text-primary">dns</span>
+<h4 class="text-white font-bold">Business Systems</h4>
+</div>
+<div class="border border-outline-variant p-4 flex flex-col gap-2">
+<span class="material-symbols-outlined text-primary">hub</span>
+<h4 class="text-white font-bold">Tech Integration</h4>
+</div>
+</div>
+<div class="w-full border border-outline-variant bg-surface-container-lowest p-2 overflow-hidden">
+<img alt="Transformation Flow" class="w-full h-auto object-cover opacity-90" src="https://lh3.googleusercontent.com/aida/AEtjO1W-_CMVb7e5J9AaGTvGy1967fvsTzJ7fa25C2BO9T26ueb2RI07AdaMMbbKFWSfju0aCRC81MmQvo9Vh0-v8JqELegWMNvfI_fU1Q1DDX50FN7UyBGFrk0K1mYci3pMLiSE1o2aK0UCfdX-UDNOnE9iVzcBbfuLnBv5rSextBDqFYmONfnBAxw_zS_ZsB7bxzI939Tgle12wGEHYJ--EcZiip6f52L44jWs1o8bTMJjJGSW7W0BZGQEL-s">
+</div>
+</section>
+<!-- 9. TRANSFORMATION PIPELINE -->
+<section class="flex flex-col gap-8 w-full">
+<h3 class="font-label-sm text-primary uppercase tracking-widest flex items-center gap-2"><span class="w-8 h-px bg-primary"></span> Pipeline</h3>
+<h2 class="font-headline-md text-white">FROM COMPLEXITY TO CLARITY</h2>
+<div class="w-full border border-outline-variant bg-surface-container-lowest p-2 overflow-hidden">
+<img alt="Transformation Pipeline" class="w-full h-auto object-cover opacity-90" src="https://lh3.googleusercontent.com/aida/AEtjO1VNo0VP4B_6XUIzpFNXSiq9TRZAkjJdowt4fJ_F88Slhl-iIbDiigkzMWRIfsFQ7dMFlz7MnYHQOw0Ee4305JIlbZIguu-pkVyyIEnTkJG7vb7dCfZSbQkTSMYjKYGADCZWvKAfytYwlyx0z9ZANPfv0stokGubebVyntThUyVLFkFS5BxRHJFtfoFL6Y5VBsaoxBe3DOB3Tt5JTQisZbIAU4ZIkmbsCZHyOmrhNGRO54zr7kRti8OXdA">
+</div>
+</section>
+<!-- 10. AI + TECHNOLOGY SYNERGY -->
+<section class="flex flex-col gap-8 w-full">
+<h3 class="font-label-sm text-primary uppercase tracking-widest flex items-center gap-2"><span class="w-8 h-px bg-primary"></span> Synergy</h3>
+<h2 class="font-headline-md text-white">AI BECOMES POWERFUL WHEN SYSTEMS ARE CONNECTED.</h2>
+<div class="w-full border border-outline-variant bg-surface-container-lowest p-2 overflow-hidden">
+<img alt="Synergy Flow" class="w-full h-auto object-cover opacity-90" src="https://lh3.googleusercontent.com/aida/AEtjO1VBQy98qwAlQbYAEJUvvvuj5xR43WknDiSr_rhqKFUnrBJ2tHPX7YUh7Opzf5-Fzsn71FjndiRAgJAdL0it22ooMTmH1eWiPXukpbwgHA5jMPNMsYM5j-95kOYTk2M1diTH6X3bIlTpJVVTrpcAQFhSqCJPT7Pqs7Fwq4yxqHA9a90C78wAVKq6xUI5RWlDdD2_sG2NHIdbHXyRAqofUIMLVWJTXGqr6U2LO3A-w_k66tF-cKJx7_ojUuA">
+</div>
+</section>
+<!-- 11. BUSINESS OUTCOMES -->
+<section class="flex flex-col gap-8 w-full py-8 border-y border-outline-variant">
+<h2 class="font-display-lg-mobile text-[48px] text-white opacity-80 leading-none">AUTOMATE.</h2>
+<h2 class="font-display-lg-mobile text-[48px] text-white opacity-80 leading-none pl-4">CONNECT.</h2>
+<h2 class="font-display-lg-mobile text-[48px] text-white opacity-80 leading-none pl-8">INTELLIGENCE.</h2>
+<h2 class="font-display-lg-mobile text-[48px] text-white opacity-80 leading-none pl-12">SCALE.</h2>
+</section>
+<!-- 12. HOW MAVYAX WORKS -->
+<section class="flex flex-col gap-8 w-full">
+<h3 class="font-label-sm text-primary uppercase tracking-widest flex items-center gap-2"><span class="w-8 h-px bg-primary"></span> Process</h3>
+<h2 class="font-headline-md text-white">FROM UNDERSTANDING TO ENGINEERING</h2>
+<!-- Removed Missing Placeholder N -->
+</section>
+<!-- 13. PHILOSOPHY -->
+<section class="flex flex-col gap-8 w-full pb-16">
+<h3 class="font-label-sm text-primary uppercase tracking-widest flex items-center gap-2"><span class="w-8 h-px bg-primary"></span> Philosophy</h3>
+<h2 class="font-headline-md text-white">TECHNOLOGY SHOULD CREATE LEVERAGE</h2>
+<p class="font-body-md text-on-surface-variant border-l-2 border-primary pl-4">We believe in building systems that compound in value over time.</p>
+<div class="flex flex-col gap-4 w-full">
+<div class="border border-outline-variant p-6 bg-surface-container-lowest">
+<h4 class="font-bold text-white mb-2">Business First</h4>
+<p class="text-sm text-on-surface-variant">Technology serves the business objective.</p>
+</div>
+<div class="border border-outline-variant p-6 bg-surface-container-lowest">
+<h4 class="font-bold text-white mb-2">Engineering Discipline</h4>
+<p class="text-sm text-on-surface-variant">Rigorous architecture and clean code.</p>
+</div>
+<div class="border border-outline-variant p-6 bg-surface-container-lowest">
+<h4 class="font-bold text-white mb-2">Long-term Thinking</h4>
+<p class="text-sm text-on-surface-variant">Building for tomorrow's scale.</p>
+</div>
+</div>
+</section>
+<!-- 14. FINAL CTA -->
+<section class="py-16 px-6 flex flex-col items-center justify-center gap-8 text-center border border-outline-variant bg-surface-container relative overflow-hidden w-full">
+<div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at center, #0052ff 0%, transparent 70%);"></div>
+<h2 class="font-display-lg-mobile text-[32px] text-white relative z-10 w-full">BUILD WHAT COMES NEXT.</h2>
+<button class="bg-primary-container text-white px-8 py-4 rounded-sm font-label-sm uppercase tracking-wider hover:bg-primary transition-colors relative z-10 w-full">
+        Start a Conversation
+    </button>
+</section>
+</main>
+<!-- 15. MOBILE FOOTER -->
+<footer class="mt-16 bg-surface-container-lowest border-t border-outline-variant pt-12 pb-24 px-6 w-full flex flex-col gap-10">
+<div class="flex flex-col gap-4">
+<span class="font-headline-md text-headline-md font-bold text-white tracking-tighter">MAVYAX</span>
+<p class="font-body-md text-on-surface-variant">Engineering Excellence for the Modern Enterprise.</p>
+</div>
+<div class="flex flex-col gap-4">
+<a class="text-on-surface-variant font-label-sm uppercase tracking-wider hover:text-primary transition-colors" href="#">Solutions</a>
+<a class="text-on-surface-variant font-label-sm uppercase tracking-wider hover:text-primary transition-colors" href="#">Systems</a>
+<a class="text-on-surface-variant font-label-sm uppercase tracking-wider hover:text-primary transition-colors" href="#">Expertise</a>
+</div>
+<div class="flex flex-col gap-2 font-label-sm text-on-surface-variant">
+<p class="">Mavyax Tech Private Limited</p>
+<p class="">Contact: hello@mavyax.com</p>
+</div>
+<div class="flex flex-col border-t border-outline-variant pt-6 font-label-sm text-on-surface-variant gap-4">
+<div class="flex gap-4">
+<a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+</div>
+<p class="">© 2026 Mavyax Tech Private Limited. All rights reserved.</p>
+</div>
+</footer>
+
+
+</body></html>

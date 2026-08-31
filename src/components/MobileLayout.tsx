@@ -16,13 +16,13 @@ export default function MobileLayout() {
       }}
     >
 {/* 1. MOBILE NAVIGATION */}
-<header className="fixed top-0 w-full z-50 bg-surface/90 dark:bg-surface/90 border-b border-outline-variant flex justify-between items-center px-4 md:px-grid-margin h-16 max-w-full backdrop-blur-md">
+<header className="fixed top-0 w-full z-50 bg-[#0a0e16] border-b border-outline-variant flex justify-between items-center px-4 md:px-grid-margin h-16 max-w-full backdrop-blur-md">
 <div className="flex items-center gap-2">
 <span className="material-symbols-outlined text-primary text-2xl" style={{ fontVariationSettings: "'FILL' 1" }}>terminal</span>
-<span className="font-display-lg-mobile text-[24px] font-extrabold tracking-tighter text-primary">MAVYAX</span>
+<span className="font-display-lg-mobile text-[24px] font-extrabold tracking-tighter text-white">MAVYAX</span>
 </div>
 <div className="flex items-center gap-4">
-<button className="bg-primary-container text-white px-3 py-1.5 text-xs rounded font-label-sm uppercase tracking-wider hover:bg-primary transition-colors">
+<button className="hidden bg-primary-container text-white px-3 py-1.5 text-xs rounded font-label-sm uppercase tracking-wider hover:bg-primary transition-colors">
             Start
         </button>
 <button className="text-primary md:hidden">

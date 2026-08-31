@@ -10,6 +10,11 @@
   --color-surface-variant: #31353e;
   --color-on-surface: #dfe2ee;
   --color-on-surface-variant: #c3c5d9;
+  --color-surface-container-lowest: #0a0e16;
+  --color-surface-container-low: #181c24;
+  --color-surface-container: #1c2028;
+  --color-surface-container-high: #262a33;
+  --color-surface-container-highest: #31353e;
   --color-outline-variant: #1E293B;
   --color-background: #0B0F17;
   --color-on-background: #dfe2ee;
