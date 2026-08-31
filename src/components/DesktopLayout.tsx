@@ -257,11 +257,7 @@ export default function DesktopLayout() {
 </div>
 <div className="col-span-12 mt-16 pt-8 border-t border-outline-variant flex flex-col md:flex-row justify-between items-center gap-4 text-on-surface-variant text-sm">
 <div>© 2026 Mavyax Tech Private Limited. All rights reserved.</div>
-<div className="flex gap-4">
-<a className="hover:text-primary transition-colors" href="#contact">Privacy Policy</a>
-<span className="opacity-30">·</span>
-<a className="hover:text-primary transition-colors" href="#contact">Terms of Service</a>
-</div>
+
 </div>
 </div>
 </footer>

@@ -237,10 +237,7 @@ export default function MobileLayout() {
 <p>GSTIN: 09AAQCM9052K1ZP</p>
 </div>
 <div className="flex flex-col border-t border-outline-variant pt-6 font-label-sm text-on-surface-variant gap-4">
-<div className="flex gap-4">
-<a className="hover:text-primary transition-colors" href="#contact">Privacy Policy</a>
-<a className="hover:text-primary transition-colors" href="#contact">Terms of Service</a>
-</div>
+
 <p>© 2026 Mavyax Tech Private Limited. All rights reserved.</p>
 </div>
 </footer>
