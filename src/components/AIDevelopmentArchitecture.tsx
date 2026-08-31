@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function AIDevelopmentArchitecture() {
   return (
-    <div className="relative w-full bg-surface-dim rounded-xl border border-outline-variant p-6 md:p-12 overflow-hidden flex flex-col items-center font-body-md text-on-surface">
+    <div className="relative w-full bg-surface-dim rounded-xl border border-outline-variant p-4 md:p-6 lg:p-8 2xl:p-12 overflow-hidden flex flex-col items-center font-body-md text-on-surface">
       
       {/* Grid Background overlay for texture */}
       <div className="absolute inset-0 grid-bg opacity-30 pointer-events-none"></div>
@@ -18,7 +18,7 @@ export default function AIDevelopmentArchitecture() {
       </div>
 
       {/* Main Diagram Area */}
-      <div className="relative w-full max-w-7xl z-10 flex flex-col lg:flex-row justify-between items-stretch gap-4 md:gap-6">
+      <div className="relative w-full max-w-7xl z-10 flex flex-col lg:flex-row justify-between items-stretch gap-4 lg:gap-3 2xl:gap-6">
         
         {/* Col 1: Business Need */}
         <div className="flex-1 flex flex-col items-center min-w-[160px]">
@@ -92,7 +92,7 @@ export default function AIDevelopmentArchitecture() {
         <Arrow />
 
         {/* Col 4: Workflow Integration */}
-        <div className="flex-1 flex flex-col items-center min-w-[180px]">
+        <div className="flex-1 flex flex-col items-center min-w-[140px] 2xl:min-w-[180px]">
           <div className="w-full h-full border-2 border-outline-variant rounded-2xl bg-surface/50 p-4 flex flex-col">
             <div className="text-center font-semibold mb-6 uppercase text-sm border-b border-outline-variant pb-3 tracking-wider">Workflow Integration</div>
             <div className="flex flex-col gap-4 flex-grow justify-center relative">
@@ -109,7 +109,7 @@ export default function AIDevelopmentArchitecture() {
         <Arrow />
 
         {/* Col 5: Business Outcome */}
-        <div className="flex-1 flex flex-col items-center min-w-[180px]">
+        <div className="flex-1 flex flex-col items-center min-w-[140px] 2xl:min-w-[180px]">
           <div className="w-full h-full border-2 border-outline-variant rounded-2xl bg-surface/50 p-4 flex flex-col">
             <div className="text-center font-semibold mb-6 uppercase text-sm border-b border-outline-variant pb-3 tracking-wider">Business Outcome</div>
             <div className="flex flex-col gap-4 flex-grow justify-center">
@@ -141,17 +141,17 @@ export default function AIDevelopmentArchitecture() {
 
 function NodeItem({ text, icon, className = "" }: { text: string, icon?: string, className?: string }) {
   return (
-    <div className={`border border-outline-variant bg-[#141923] rounded-lg px-3 py-3 flex flex-col items-center justify-center text-center shadow-sm text-[11px] text-on-surface hover:border-primary/50 transition-colors ${className}`}>
+    <div className={`border border-outline-variant bg-[#141923] rounded-lg px-2 py-2 2xl:px-3 2xl:py-3 flex flex-col items-center justify-center text-center shadow-sm text-[11px] text-on-surface hover:border-primary/50 transition-colors ${className}`}>
       {icon && <span className="material-symbols-outlined text-on-surface-variant mb-2 text-[20px]">{icon}</span>}
-      <span className="leading-snug">{text}</span>
+      <span className="leading-snug break-words">{text}</span>
     </div>
   );
 }
 
 function Arrow() {
   return (
-    <div className="hidden lg:flex items-center justify-center text-primary px-2">
-      <svg width="40" height="24" viewBox="0 0 40 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <div className="hidden lg:flex items-center justify-center text-primary px-1 2xl:px-2 w-6 2xl:w-10">
+      <svg className="w-full h-auto" viewBox="0 0 40 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M0 12H38M38 12L28 2M38 12L28 22" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
       </svg>
     </div>
