@@ -233,7 +233,9 @@ export default function MobileLayout() {
 </div>
 <div className="flex flex-col gap-2 font-label-sm text-on-surface-variant">
 <p>Mavyax Tech Private Limited</p>
-<p>Contact: hello@mavyax.com</p>
+<p>+91 8925687688</p>
+<p>info@mavyax.com</p>
+<p>GSTIN: 09AAQCM9052K1ZP</p>
 </div>
 <div className="flex flex-col border-t border-outline-variant pt-6 font-label-sm text-on-surface-variant gap-4">
 <div className="flex gap-4">

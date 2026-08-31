@@ -246,13 +246,13 @@ export default function DesktopLayout() {
 </div>
 <div className="flex flex-col gap-2">
 <span className="text-on-surface font-semibold mb-2">Contact</span>
-<p>[PHONE NUMBER]</p>
-<p>[EMAIL ADDRESS]</p>
+<p>+91 8925687688</p>
+<p>info@mavyax.com</p>
 </div>
 <div className="flex flex-col gap-2">
 <span className="text-on-surface font-semibold mb-2">Legal</span>
 <p>Mavyax Tech Private Limited</p>
-<p>GSTIN: [GST NUMBER]</p>
+<p>GSTIN: 09AAQCM9052K1ZP</p>
 </div>
 </div>
 <div className="col-span-12 mt-16 pt-8 border-t border-outline-variant flex flex-col md:flex-row justify-between items-center gap-4 text-on-surface-variant text-sm">
