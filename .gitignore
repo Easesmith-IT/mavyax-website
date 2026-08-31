@@ -1,4 +1,4 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+﻿# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
 /node_modules
@@ -39,3 +39,18 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Python scratch files and build artifacts
+__pycache__/
+*.py[cod]
+
+# Screenshot and generated files
+.stitch/
+canvas_*.png
+nextjs_*.png
+mobile_screen.json
+mobile_stitch.html
+
+# Local testing scripts
+*.py
+
