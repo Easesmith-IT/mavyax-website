@@ -8,8 +8,15 @@ export default function DesktopLayout() {
       {/* 1. Navigation */}
       <nav className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-outline-variant">
         <div className="flex justify-between items-center h-20 px-grid-margin max-w-[1600px] mx-auto">
-          <a href="#top" className="font-headline-md text-headline-md tracking-tighter font-bold text-on-surface hover:opacity-90 transition-opacity">
-            MAVYAX
+          <a href="#top" className="hover:opacity-90 transition-opacity flex items-center">
+            <Image
+              src="/logo.png"
+              alt="MAVYAX"
+              width={160}
+              height={35}
+              className="h-9 w-auto object-contain"
+              priority
+            />
           </a>
           <div className="hidden md:flex gap-component-gap font-body-md text-body-md">
             <a className="text-on-surface-variant hover:text-primary transition-colors" href="#capabilities">Capabilities</a>
@@ -247,8 +254,14 @@ export default function DesktopLayout() {
       <footer className="bg-surface-dim border-t border-outline-variant w-full py-20 font-body-md text-body-md">
         <div className="grid grid-cols-12 gap-gutter px-grid-margin max-w-[1600px] mx-auto">
           <div className="col-span-12 md:col-span-4 flex flex-col gap-4">
-            <a href="#top" className="font-headline-md text-headline-md font-bold text-on-surface hover:opacity-90 transition-opacity">
-              MAVYAX
+            <a href="#top" className="hover:opacity-90 transition-opacity flex items-center">
+              <Image
+                src="/logo.png"
+                alt="MAVYAX"
+                width={160}
+                height={35}
+                className="h-9 w-auto object-contain"
+              />
             </a>
             <p className="text-on-surface-variant">AI &amp; Technology Transformation</p>
           </div>

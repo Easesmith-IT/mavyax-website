@@ -22,7 +22,16 @@ export default function MobileLayout() {
         {/* 1. MOBILE NAVIGATION */}
         <header className="fixed top-0 w-full z-50 bg-[#0a0e16] border-b border-outline-variant flex justify-between items-center px-4 md:px-grid-margin h-16 max-w-full backdrop-blur-md">
           <div className="flex items-center gap-2">
-            <a href="#top" className="font-display-lg-mobile text-[24px] font-extrabold tracking-tighter text-white">MAVYAX</a>
+            <a href="#top" className="hover:opacity-90 transition-opacity flex items-center">
+              <Image
+                src="/logo.png"
+                alt="MAVYAX"
+                width={140}
+                height={30}
+                className="h-8 w-auto object-contain"
+                priority
+              />
+            </a>
           </div>
           <div className="flex items-center gap-4">
             <button 
@@ -268,7 +277,7 @@ export default function MobileLayout() {
 
           {/* 14. FINAL CTA */}
           <section id="contact" className="scroll-mt-20 py-16 px-6 flex flex-col items-center justify-center gap-8 text-center border border-outline-variant bg-surface-container relative overflow-hidden w-full">
-            <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "radial-gradient(circle at center, #0052ff 0%, transparent 70%)" }}></div>
+            <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "radial-gradient(circle at center, #9333ea 0%, transparent 70%)" }}></div>
             <h2 className="font-display-lg-mobile text-[32px] text-white relative z-10 w-full">BUILD WHAT COMES NEXT.</h2>
             <a href="mailto:info@mavyax.com" className="bg-primary-container text-white px-8 py-4 rounded-sm font-label-sm uppercase tracking-wider hover:bg-primary transition-colors relative z-10 w-full block text-center">
               Start a Conversation
@@ -279,7 +288,15 @@ export default function MobileLayout() {
         {/* 15. MOBILE FOOTER */}
         <footer className="mt-16 bg-surface-container-lowest border-t border-outline-variant pt-12 pb-24 px-6 w-full flex flex-col gap-10">
           <div className="flex flex-col gap-4">
-            <a href="#top" className="font-headline-md text-headline-md font-bold text-white tracking-tighter hover:opacity-90 transition-opacity">MAVYAX</a>
+            <a href="#top" className="hover:opacity-90 transition-opacity flex items-center w-max">
+              <Image
+                src="/logo.png"
+                alt="MAVYAX"
+                width={150}
+                height={33}
+                className="h-9 w-auto object-contain"
+              />
+            </a>
             <p className="font-body-md text-on-surface-variant">Engineering Excellence for the Modern Enterprise.</p>
           </div>
           <div className="flex flex-col gap-4">
